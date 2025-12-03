@@ -1,4 +1,11 @@
 ﻿using aoc.Business;
+using System.Diagnostics;
 
-var day01 = new Day01(true, true);
-Console.WriteLine(day01.Solve());
+var watch = new Stopwatch();
+var solver = new Day02(true, true);
+watch.Start();
+var result = solver.Solve();
+watch.Stop();
+
+Console.WriteLine(result);
+Console.WriteLine($"Duration: {watch.ElapsedMilliseconds} ms");
