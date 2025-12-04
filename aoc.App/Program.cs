@@ -1,11 +1,9 @@
-﻿using aoc.Business;
-using System.Diagnostics;
+﻿using aoc.App;
+using aoc.Business;
 
-var watch = new Stopwatch();
-var solver = new Day04(true, true);
-watch.Start();
-var result = solver.Solve();
-watch.Stop();
+Type[] solvers = [typeof(Day01), typeof(Day02), typeof(Day03), typeof(Day04), typeof(Day05)];
 
-Console.WriteLine(result);
-Console.WriteLine($"Duration: {watch.ElapsedMilliseconds} ms");
+foreach(var type in solvers)
+{
+    GenericRunner.Run(type);
+}

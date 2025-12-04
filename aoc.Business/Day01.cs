@@ -3,7 +3,7 @@
 
 namespace aoc.Business
 {
-    public class Day01
+    public class Day01 : ISolver
     {
         private readonly string[] _input = [];
 
@@ -85,7 +85,7 @@ namespace aoc.Business
             return crossedZero;
         }
 
-        public int Solve()
+        public object Solve()
         {
             foreach (var input in _input)
             {

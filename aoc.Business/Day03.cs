@@ -1,6 +1,6 @@
 ﻿namespace aoc.Business
 {
-    public class Day03
+    public class Day03 : ISolver
     {
         private readonly string[] _input = [];
         private readonly bool _safetyOverride;
@@ -15,7 +15,7 @@
             _safetyOverride = safetyOverride;
         }
 
-        public long Solve()
+        public object Solve()
         {
             return _safetyOverride ?
                 _input.Select(i => FindMaxValueWithSafetyOff(i, 12, -1)).Sum() :

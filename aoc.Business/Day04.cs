@@ -1,7 +1,7 @@
 ﻿
 namespace aoc.Business
 {
-    public class Day04
+    public class Day04 : ISolver
     {
         private readonly string[] _input = [];
         private readonly bool _removeRecursively = false;
@@ -95,7 +95,7 @@ namespace aoc.Business
             return total;
         }
 
-        public long Solve()
+        public object Solve()
         {
             return _removeRecursively ? 
                 SolveRecursively(_input, 0) : 

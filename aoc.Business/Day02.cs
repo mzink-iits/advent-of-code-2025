@@ -1,6 +1,6 @@
 ﻿namespace aoc.Business
 {
-    public class Day02
+    public class Day02 : ISolver
     {
         private readonly string _input = string.Empty;
         private readonly bool _solveForMultiple = false;
@@ -15,7 +15,7 @@
         }
 
 
-        public long Solve()
+        public object Solve()
         {
             var invalidIds = _solveForMultiple ? IdentifyMultipleRepetitions(_input) : IdentifySingleRepetition(_input);
             return invalidIds.Sum();
